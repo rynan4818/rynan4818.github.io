@@ -37,6 +37,8 @@ $(function(){
 		}
         $("#msg-area").text(JSON.stringify(check_json[index], null,"\t"));
 		$("#index").text(`index:${index}`);
+		var json_time = new Date(check_json[index].time);
+		$("#time").text("Event Time:" + json_time.toString());
     });
 
     ws.onmessage = function(event){

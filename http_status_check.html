@@ -7,19 +7,59 @@ var json_data_buffer = {};
 var json_data_all_buffer = [];
 var now_event = "all";
 var index = null;
+var last_json = {};
+var last_event_json = {};
+var connect_enable = false;
+var ws;
 
-Date.prototype.toLocaleString = function()
-{
-    return this.toLocaleDateString() + ' ' + this.toLocaleTimeString() + '.' + ('00' + this.getMilliseconds()).slice(-3);
+Date.prototype.toLocaleString = function(){
+  return this.toLocaleDateString() + ' ' + this.toLocaleTimeString() + '.' + ('00' + this.getMilliseconds()).slice(-3);
 }
 
 $(function(){
-    var ws = new WebSocket('ws://localhost:6557/socket');                                                                                                
+	function connect() {
+		ws = new WebSocket('ws://localhost:6557/socket');                                                                                                
+		ws.onopen = function(event){
+			$("#connect").text("HTTPStatus Connect!");
+		}
 
-    $("#trace").on('click', function(){
-		var realtime = $('input:radio[name="realtime"]:checked').val()
-		if (realtime === "realtime") return;
-		var event = $('input:radio[name="event"]:checked').val()
+		ws.onclose = function(event){
+			$("#connect").text("HTTPStatus Disconnect!");
+			setTimeout(connect, 3000);
+		};
+
+		ws.onmessage = function(event){
+			var json = event.data.replace(/([,{}])/g, "$1\n");
+			var json_data = JSON.parse(json);
+			last_json = json_data;
+			last_event_json[json_data.event] = json_data;
+			if (typeof json_data_buffer[json_data.event] === "undefined") json_data_buffer[json_data.event] = [];
+			var realtime = $('input:radio[name="realtime"]:checked').val();
+			var event = $('input:radio[name="event"]:checked').val();
+			if (realtime === "realtime" && (event === "all" || json_data.event === event)) {
+				$("#msg-area").text(JSON.stringify(json_data, null,"\t"));
+				var json_time = new Date(json_data.time);
+				$("#time").text("Event Time:" + json_time.toLocaleString());
+				if (event === "all") {
+					$("#index").text(`index:${json_data_all_buffer.length}`);
+				} else {
+					$("#index").text(`index:${json_data_buffer[event].length}`);
+				}
+			}
+			if (typeof json_data.status !== "undefined" && json_data.status !== null) {
+				if (typeof json_data.status.beatmap !== "undefined" && json_data.status.beatmap !== null) {
+					json_data.status.beatmap.songCover = "!DELETE!(http_statsu_check.html)";
+				}
+			}
+			json_data_buffer[json_data.event].push(json_data);
+			json_data_all_buffer.push(json_data);
+			// console.log(JSON.stringify(json_data, null,"\t"));
+		};
+	}
+	function trace(value) {
+		var realtime = $('input:radio[name="realtime"]:checked').val();
+		if (realtime !== "trace") return;
+		var event = $('input:radio[name="event"]:checked').val();
 		if (now_event !== event) {
 			now_event = event;
 			index = null;
@@ -30,10 +70,16 @@ $(function(){
 		} else {
 			check_json = json_data_buffer[event];
 		}
+		if (typeof check_json === "undefined" || check_json === null) {
+		$("#msg-area").text("Empty!");
+		$("#index").text("");
+		$("#time").text("");
+			return;
+		}
 		if (index === null) {
 			index = check_json.length - 1;
 		} else {
-			if (realtime === "backtrace") {
+			if (value === "back") {
 				index -= 1;
 				if (index < 0) index = 0;
 			} else {
@@ -41,32 +87,37 @@ $(function(){
 				if (check_json.length  <= index) index = check_json.length - 1;
 			}
 		}
-        $("#msg-area").text(JSON.stringify(check_json[index], null,"\t"));
+		$("#msg-area").text(JSON.stringify(check_json[index], null,"\t"));
 		$("#index").text(`index:${index}`);
 		var json_time = new Date(check_json[index].time);
 		$("#time").text("Event Time:" + json_time.toLocaleString());
-    });
+	}
 
-    ws.onmessage = function(event){
-		var json = event.data.replace(/([,{}])/g, "$1\n");
-		var json_data = JSON.parse(json);
-		if (typeof json_data_buffer[json_data.event] === "undefined") json_data_buffer[json_data.event] = [];
-		var realtime = $('input:radio[name="realtime"]:checked').val()
-		var event = $('input:radio[name="event"]:checked').val()
-		if (realtime === "realtime" && (event === "all" || json_data.event === event)) {
-	        $("#msg-area").text(JSON.stringify(json_data, null,"\t"));
-			var json_time = new Date(json_data.time);
-			$("#time").text("Event Time:" + json_time.toLocaleString());
+	$("#back").on('click', function(){
+		trace("back");
+	});
+	
+	$("#forward").on('click', function(){
+		trace("forward");
+	});
+
+  $('input[name="realtime"]:radio').change(function() {
+		var realtime = $('input:radio[name="realtime"]:checked').val();
+		if (realtime !== "realtime") return;
+		var event = $('input:radio[name="event"]:checked').val();
+		var update_json = {};
+		if (event === "all") {
+			update_json = last_json;
+			$("#index").text(`index:${json_data_all_buffer.length - 1}`);
+		} else {
+			update_json = last_event_json[event];
+			$("#index").text(`index:${json_data_buffer[event].length - 1}`);
 		}
-		if (typeof json_data.status !== "undefined" && json_data.status !== null) {
-			if (typeof json_data.status.beatmap !== "undefined" && json_data.status.beatmap !== null) {
-				json_data.status.beatmap.songCover = "!DELETE!(http_statsu_check.html)";
-			}
-		}
-		json_data_buffer[json_data.event].push(json_data);
-		json_data_all_buffer.push(json_data);
-		// console.log(JSON.stringify(json_data, null,"\t"));
-    };
+		$("#msg-area").text(JSON.stringify(update_json, null,"\t"));
+		var json_time = new Date(update_json.time);
+		$("#time").text("Event Time:" + json_time.toLocaleString());
+	});
+	connect();
 });
 </script>
 </head>
@@ -74,10 +125,11 @@ $(function(){
 <H1>Beat Saber HTTP Status Checker</H1>
 <a href="https://github.com/opl-/beatsaber-http-status/blob/master/protocol.md" target="_blank">Beat Saber HTTP Status protocol</a>
 <hr>
+<span id="connect"></span><br>
 <input type="radio" name="realtime" value="realtime" checked/>Realtime
-<input type="radio" name="realtime" value="backtrace"/>Back Trace
-<input type="radio" name="realtime" value="forwardtrace"/>Forward Trace
-<input type="button" id="trace" value="trace"/>
+<input type="radio" name="realtime" value="trace"/>Trace
+<input type="button" id="back" value="Back"/>
+<input type="button" id="forward" value="Forward"/>
 <hr>
 <table>
 	<tr>

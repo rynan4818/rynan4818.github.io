@@ -7,6 +7,22 @@ var json_data_buffer = {};
 var json_data_all_buffer = [];
 var now_event = "all";
 var index = null;
+
+Date.prototype.toLocaleString = function()
+{
+    return [
+        this.getFullYear(),
+        ('0' + (this.getMonth() + 1)).slice(-2),
+        ('0' + this.getDate()).slice(-2)
+        ].join('/') + ' '
+        + [
+		('0' + this.getHours()).slice(-2),
+		('0' + this.getMinutes()).slice(-2),
+		('0' + this.getSeconds()).slice(-2)
+		].join(':') + '.'
+		+ ('00' + this.getMilliseconds()).slice(-3);
+}
+
 $(function(){
     var ws = new WebSocket('ws://localhost:6557/socket');                                                                                                
 
@@ -38,7 +54,7 @@ $(function(){
         $("#msg-area").text(JSON.stringify(check_json[index], null,"\t"));
 		$("#index").text(`index:${index}`);
 		var json_time = new Date(check_json[index].time);
-		$("#time").text("Event Time:" + json_time.toString());
+		$("#time").text("Event Time:" + json_time.toLocaleString());
     });
 
     ws.onmessage = function(event){
@@ -50,7 +66,7 @@ $(function(){
 		if (realtime === "realtime" && (event === "all" || json_data.event === event)) {
 	        $("#msg-area").text(JSON.stringify(json_data, null,"\t"));
 			var json_time = new Date(json_data.time);
-			$("#time").text("Event Time:" + json_time.toString());
+			$("#time").text("Event Time:" + json_time.toLocaleString());
 		}
 		if (typeof json_data.status !== "undefined" && json_data.status !== null) {
 			if (typeof json_data.status.beatmap !== "undefined" && json_data.status.beatmap !== null) {

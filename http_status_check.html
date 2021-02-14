@@ -72,6 +72,7 @@ $(function(){
 </head>
 <body>
 <H1>Beat Saber HTTP Status Checker</H1>
+<a href="https://github.com/opl-/beatsaber-http-status/blob/master/protocol.md" target="_blank">Beat Saber HTTP Status protocol</a>
 <hr>
 <input type="radio" name="realtime" value="realtime" checked/>Realtime
 <input type="radio" name="realtime" value="backtrace"/>Back Trace
@@ -81,15 +82,14 @@ $(function(){
 <table>
 	<tr>
 		<td><input type="radio" name="event" value="all" checked/>all</td>
-	</tr>
-	<tr>
 		<td><input type="radio" name="event" value="hello"/>hello</td>
 		<td><input type="radio" name="event" value="songStart"/>songStart</td>
 		<td><input type="radio" name="event" value="finished"/>finished</td>
 		<td><input type="radio" name="event" value="softFailed"/>softFailed</td>
-		<td><input type="radio" name="event" value="menu"/>menu</td>
+		<td><input type="radio" name="event" value="failed"/>failed</td>
 	</tr>
 	<tr>
+		<td><input type="radio" name="event" value="menu"/>menu</td>
 		<td><input type="radio" name="event" value="pause"/>pause</td>
 		<td><input type="radio" name="event" value="resume"/>resume</td>
 		<td><input type="radio" name="event" value="noteCut"/>noteCut</td>
@@ -100,6 +100,7 @@ $(function(){
 		<td><input type="radio" name="event" value="bombCut"/>bombCut</td>
 		<td><input type="radio" name="event" value="bombMissed"/>bombMissed</td>
 		<td><input type="radio" name="event" value="obstacleEnter"/>obstacleEnter</td>
+		<td><input type="radio" name="event" value="obstacleExit"/>obstacleExit</td>
 		<td><input type="radio" name="event" value="scoreChanged"/>scoreChanged</td>
 		<td><input type="radio" name="event" value="beatmapEvent"/>beatmapEvent</td>
 	</tr>

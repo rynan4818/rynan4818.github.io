@@ -21,10 +21,12 @@ $(function(){
 		ws = new WebSocket('ws://localhost:6557/socket');                                                                                                
 		ws.onopen = function(event){
 			$("#connect").text("HTTPStatus Connect!");
+			document.getElementById("connect").style.color = "blue";
 		}
 
 		ws.onclose = function(event){
 			$("#connect").text("HTTPStatus Disconnect!");
+			document.getElementById("connect").style.color = "red";
 			setTimeout(connect, 3000);
 		};
 

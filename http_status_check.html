@@ -50,7 +50,9 @@ $(function(){
 			}
 			if (typeof json_data.status !== "undefined" && json_data.status !== null) {
 				if (typeof json_data.status.beatmap !== "undefined" && json_data.status.beatmap !== null) {
-					json_data.status.beatmap.songCover = "!DELETE!(http_statsu_check.html)";
+					if ($("#imgcnv").prop('checked')) {
+						json_data.status.beatmap.songCover = "iVBORw0KGgoAAAANSUhEUgAAAGQAAABkAQMAAABKLAcXAAAABlBMVEUAAAD///+l2Z/dAAAADnRFWHRUaXRsZQCWs5HoLnBuZ8yMq9MAAAAMdEVYdFNvZnR3YXJlAFZpWKwibm0AAAAUSURBVHjaY2AYBaNgFIyCUUBPAAAFeAAB2CmiuAAAAABJRU5ErkJggg==";
+					}
 				}
 			}
 			json_data_buffer[json_data.event].push(json_data);
@@ -101,6 +103,27 @@ $(function(){
 	
 	$("#forward").on('click', function(){
 		trace("forward");
+	});
+
+
+	$("#save").on('click', function(){
+	var text = "";
+	json_data_all_buffer.forEach(function(elem,i) {
+		text += JSON.stringify(elem) + "\r\n";
+	});
+	
+		var blob = new Blob([text], {type: "text/plain"});
+		if(window.navigator.msSaveBlob)
+		{
+				window.navigator.msSaveBlob(blob, "httpstatus.log");
+		} else {
+				var a = document.createElement("a");
+				a.href = URL.createObjectURL(blob);
+				a.target = '_blank';
+				a.download = 'httpstatus.log';
+				a.click();
+			URL.revokeObjectURL(a.href);
+		}
 	});
 
   $('input[name="realtime"]:radio').change(function() {
@@ -160,6 +183,8 @@ $(function(){
 	</tr>
 </table>
 <hr>
+<input type="checkbox" id="imgcnv" value="songCover change" checked>Replace the songCover image with a solid black color<br>
+<input type="button" id="save" value="File save"/>
 <pre id="index"></pre>
 <pre id="time"></pre>
 <pre id="msg-area"></pre>

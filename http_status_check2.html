@@ -11,6 +11,12 @@ Date.prototype.toLocaleString = function(){
 }
 
 $(function(){
+  
+  function paddingright(val,char,n){
+    for(; val.length < n; val+=char);
+    return val;
+  }
+  
   function filter_check(filter_name, json_data){
     var filter_data = $(`select[name='${filter_name}']`).val();
     if (filter_data === "") return "";
@@ -40,7 +46,7 @@ $(function(){
 		ws.onmessage = function(event){
 			var json_data = JSON.parse(event.data);
       var json_time = new Date(json_data.time);
-      var temp_mes = `${json_time.toLocaleString()}\t${json_data.event}\t`;
+      var temp_mes = `${json_time.toLocaleString()}\t${paddingright(json_data.event," ",15)}\t`;
       var temp_mes2 = filter_check("filter1",json_data) + "\t";
       temp_mes2 += filter_check("filter2",json_data) + "\t";
       temp_mes2 += filter_check("filter3",json_data) + "\t";

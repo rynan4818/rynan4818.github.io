@@ -1,0 +1,280 @@
+<html>
+<head><meta charset="UTF-8" />
+<title>websocket ruby test</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.3.min.js"></script> 
+<script type="text/javascript">
+var ws;
+var mes = "";
+
+Date.prototype.toLocaleString = function(){
+  return this.toLocaleDateString() + ' ' + this.toLocaleTimeString() + '.' + ('00' + this.getMilliseconds()).slice(-3);
+}
+
+$(function(){
+  function filter_check(filter_name, json_data){
+    var filter_data = $(`select[name='${filter_name}']`).val();
+    if (filter_data === "") return "";
+    filter = filter_data.split(':');
+    var data = json_data;
+    if (filter[0] === "game" || filter[0] === "beatmap" || filter[0] === "performance" || filter[0] === "mod" || filter[0] === "playerSettings"){
+      data = json_data.status;
+    }
+    if (typeof data[filter[0]] === "undefined" || data[filter[0]] === null) return "";
+    if (typeof data[filter[0]][filter[1]] === "undefined") return "";
+    return data[filter[0]][filter[1]];
+  }
+
+  function connect() {
+		ws = new WebSocket('ws://localhost:6557/socket');
+		ws.onopen = function(event){
+			$("#connect").text("HTTPStatus Connect!");
+			document.getElementById("connect").style.color = "blue";
+		}
+
+		ws.onclose = function(event){
+			$("#connect").text("HTTPStatus Disconnect!");
+			document.getElementById("connect").style.color = "red";
+			setTimeout(connect, 3000);
+		};
+
+		ws.onmessage = function(event){
+			var json_data = JSON.parse(event.data);
+      var json_time = new Date(json_data.time);
+      var temp_mes = `${json_time.toLocaleString()}\t${json_data.event}\t`;
+      var temp_mes2 = filter_check("filter1",json_data) + "\t";
+      temp_mes2 += filter_check("filter2",json_data) + "\t";
+      temp_mes2 += filter_check("filter3",json_data) + "\t";
+      temp_mes2 += filter_check("filter4",json_data) + "\t";
+      temp_mes2 += filter_check("filter5",json_data) + "\t";
+      temp_mes2 += filter_check("filter6",json_data) + "\t";
+      temp_mes2 += filter_check("filter7",json_data) + "\t";
+      temp_mes2 += filter_check("filter8",json_data) + "\t";
+      if (temp_mes2 === "\t\t\t\t\t\t\t\t" && $("#ignore").prop('checked')) return;
+      mes += temp_mes + temp_mes2 + "\n";
+      $("#msg-area").text(mes);
+		};
+	}
+  
+	$("#clear").on('click', function(){
+    mes = "";
+    $("#msg-area").text(mes);
+	});
+  
+	connect();
+});
+
+</script>
+</head>
+<body>
+<H1>Beat Saber HTTP Status Checker2</H1>
+<a href="https://rynan4818.github.io/http_status_check.html" target="_blank">Checker that can be filtered by event.</a><br>
+<a href="https://github.com/opl-/beatsaber-http-status/blob/master/protocol.md" target="_blank">Beat Saber HTTP Status protocol.</a>
+<hr>
+<span id="connect"></span><br>
+<hr>
+Item filter
+<table>
+	<tr>
+    <td><select id="filter1" name="filter1">
+      <option value=""></option>
+    </select></td>
+    <td><select id="filter2" name="filter2">
+      <option value=""></option>
+    </select></td>
+    <td><select id="filter3" name="filter3">
+      <option value=""></option>
+    </select></td>
+    <td><select id="filter4" name="filter4">
+      <option value=""></option>
+    </select></td>
+  </tr>
+  <tr>
+    <td><select id="filter5" name="filter5">
+      <option value=""></option>
+    </select></td>
+    <td><select id="filter6" name="filter6">
+      <option value=""></option>
+    </select></td>
+    <td><select id="filter7" name="filter7">
+      <option value=""></option>
+    </select></td>
+    <td><select id="filter8" name="filter8">
+      <option value=""></option>
+    </select></td>
+	</tr>
+</table>
+<input type="checkbox" id="ignore" value="ignore" checked>Ignore events that have no output data.<br>
+<hr>
+<input type="button" id="clear" value="Clear"/>
+<pre id="msg-area"></pre>
+<script type="text/javascript">
+const httpstatus_json = {
+  "game": {
+    "pluginVersion": "",
+    "gameVersion": "",
+    "scene": "",
+    "mode": ""
+  },
+  "beatmap": {
+    "songName": "",
+    "songSubName": "",
+    "songAuthorName": "",
+    "levelAuthorName": "",
+    "songCover": "",
+    "songHash": "",
+    "levelId": "",
+    "songBPM": 0,
+    "noteJumpSpeed": 0,
+    "songTimeOffset": 0,
+    "start": 0,
+    "paused": null,
+    "length": 0,
+    "difficulty": "",
+    "notesCount": 0,
+    "bombsCount": 0,
+    "obstaclesCount": 0,
+    "maxScore": 0,
+    "maxRank": "SS",
+    "environmentName": "",
+    "customLabel": "",
+    "pp": 0,
+    "star": 0,
+    "downloadCount": 0,
+    "upVotes": 0,
+    "downVotes": 0,
+    "rating": 0
+  },
+  "performance": {
+    "rawScore": 0,
+    "score": 0,
+    "currentMaxScore": 0,
+    "rank": "",
+    "passedNotes": 0,
+    "hitNotes": 0,
+    "missedNotes": 0,
+    "lastNoteScore": 0,
+    "passedBombs": 0,
+    "hitBombs": 0,
+    "combo": 0,
+    "maxCombo": 0,
+    "multiplier": 0,
+    "multiplierProgress": 0,
+    "batteryEnergy": null,
+    "softFailed": false,
+    "energy": 0,
+    "relativeScore": 0,
+    "current_pp": 0
+  },
+  "mod": {
+    "multiplier": 1,
+    "obstacles": "",
+    "instaFail": false,
+    "noFail": false,
+    "batteryEnergy": false,
+    "batteryLives": null,
+    "disappearingArrows": false,
+    "noBombs": false,
+    "songSpeed": "Normal",
+    "songSpeedMultiplier": 1,
+    "noArrows": false,
+    "ghostNotes": false,
+    "failOnSaberClash": false,
+    "strictAngles": false,
+    "fastNotes": false,
+    "smallNotes": false,
+    "proMode": false,
+    "zenMode": false
+  },
+  "playerSettings": {
+    "staticLights": false,
+    "leftHanded": false,
+    "playerHeight": 1,
+    "sfxVolume": 1,
+    "reduceDebris": false,
+    "noHUD": false,
+    "advancedHUD": true,
+    "autoRestart": false,
+    "saberTrailIntensity": 0.5,
+    "environmentEffects": "",
+    "hideNoteSpawningEffect": false
+  },
+  "noteCut": {
+    "noteID": 1,
+    "noteType": "NoteB",
+    "noteCutDirection": "DownLeft",
+    "noteLine": 1,
+    "noteLayer": 0,
+    "speedOK": true,
+    "directionOK": true,
+    "saberTypeOK": true,
+    "wasCutTooSoon": false,
+    "initialScore": 70,
+    "finalScore": null,
+    "cutDistanceScore": 0,
+    "swingRating": 1,
+    "multiplier": 1,
+    "saberSpeed": 0,
+    "saberDir": [0, 0, 0],
+    "saberType": "SaberB",
+    "timeDeviation": 0,
+    "cutDirectionDeviation": 0,
+    "cutPoint": [0, 0, 0],
+    "cutNormal": [0, 0, 0],
+    "cutDistanceToCenter": 0,
+    "timeToNextBasicNote": 0
+  },
+  "beatmapEvent": {
+    "type": 1,
+    "value": 1
+  }
+}
+
+const dom_filter1 = document.getElementById('filter1');
+const dom_filter2 = document.getElementById('filter2');
+const dom_filter3 = document.getElementById('filter3');
+const dom_filter4 = document.getElementById('filter4');
+const dom_filter5 = document.getElementById('filter5');
+const dom_filter6 = document.getElementById('filter6');
+const dom_filter7 = document.getElementById('filter7');
+const dom_filter8 = document.getElementById('filter8');
+window.onload = function() {
+  for (let category in httpstatus_json) {
+    for (let item in httpstatus_json[category]) {
+      const op1 = document.createElement('option');
+      const op2 = document.createElement('option');
+      const op3 = document.createElement('option');
+      const op4 = document.createElement('option');
+      const op5 = document.createElement('option');
+      const op6 = document.createElement('option');
+      const op7 = document.createElement('option');
+      const op8 = document.createElement('option');
+      op1.text = category + ":" + item;
+      op2.text = category + ":" + item;
+      op3.text = category + ":" + item;
+      op4.text = category + ":" + item;
+      op5.text = category + ":" + item;
+      op6.text = category + ":" + item;
+      op7.text = category + ":" + item;
+      op8.text = category + ":" + item;
+      op1.value = category + ":" + item;
+      op2.value = category + ":" + item;
+      op3.value = category + ":" + item;
+      op4.value = category + ":" + item;
+      op5.value = category + ":" + item;
+      op6.value = category + ":" + item;
+      op7.value = category + ":" + item;
+      op8.value = category + ":" + item;
+      dom_filter1.appendChild(op1);
+      dom_filter2.appendChild(op2);
+      dom_filter3.appendChild(op3);
+      dom_filter4.appendChild(op4);
+      dom_filter5.appendChild(op5);
+      dom_filter6.appendChild(op6);
+      dom_filter7.appendChild(op7);
+      dom_filter8.appendChild(op8);
+    }
+  }
+}
+</script>
+</body>
+</html>

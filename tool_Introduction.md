@@ -94,3 +94,5 @@ id, key, downloadCount, upVotes, downVotes, heat, rating, automapper, uploaddate
 
 ※サーバの負荷対策のため、一般公開はしていません。日本のビーセイ鯖のユーザはmod置き場の2020/2/2の私の書き込みを参照下さい。
 
+## [BeatSaberの譜面作成方法](https://note.com/rynan/n/nc899b58987c9)
+ツールではありませんが、作譜をやってみて調べた内容でnoteの記事を書きました。

@@ -96,3 +96,6 @@ id, key, downloadCount, upVotes, downVotes, heat, rating, automapper, uploaddate
 
 ## [BeatSaberの譜面作成方法](https://note.com/rynan/n/nc899b58987c9)
 ツールではありませんが、作譜をやってみて調べた内容でnoteの記事を書きました。
+
+## [Quest2でBeatSaberを始めた人が、PC版でアバター表示のプレイ録画するまで](https://note.com/rynan/n/na2e0a6925892)
+こちらはQuest2でBeatSaberを始めた人向けのnote記事です。

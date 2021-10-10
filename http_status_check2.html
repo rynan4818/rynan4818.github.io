@@ -26,8 +26,15 @@ $(function(){
       data = json_data.status;
     }
     if (typeof data[filter[0]] === "undefined" || data[filter[0]] === null) return "";
-    if (typeof data[filter[0]][filter[1]] === "undefined") return "";
-    return data[filter[0]][filter[1]];
+    if (filter[1].indexOf(';') != -1) {
+      filter2 = filter[1].split(';');
+      data = data[filter[0]]
+      if (typeof data[filter2[0]][filter2[1]] === "undefined") return "";
+      return data[filter2[0]][filter2[1]];
+    } else {
+      if (typeof data[filter[0]][filter[1]] === "undefined") return "";
+      return data[filter[0]][filter[1]];
+    }
   }
 
   function connect() {
@@ -142,6 +149,13 @@ const httpstatus_json = {
     "maxScore": 0,
     "maxRank": "SS",
     "environmentName": "",
+    "color;saberA": [0,0,0],
+    "color;saberB": [0,0,0],
+    "color;environment0": [0,0,0],
+    "color;environment1": [0,0,0],
+    "color;environment0Boost": null,
+    "color;environment1Boost": null,
+    "color;obstacle": [0,0,0],
     "customLabel": "",
     "pp": 0,
     "star": 0,
@@ -167,6 +181,7 @@ const httpstatus_json = {
     "multiplierProgress": 0,
     "batteryEnergy": null,
     "softFailed": false,
+    "currentSongTime": 0,
     "energy": 0,
     "relativeScore": 0,
     "current_pp": 0

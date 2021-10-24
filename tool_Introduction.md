@@ -13,6 +13,11 @@ BeatSaberのゲームプレイ録画の編集や整理を支援するツール
 ## [DataRecorder](https://github.com/rynan4818/DataRecorder)
 上記のプレイ動画カットツール（[BS Movie Cut](https://github.com/rynan4818/bs-movie-cut)）用のプレイ情報記録用mod
 
+## [CutSpeedCounter](https://github.com/rynan4818/CutSpeedCounter)
+ノーツカットのスピードを表示するCounters+用カスタムカウンター
+
+<img src="https://user-images.githubusercontent.com/14249877/138584495-2aabd12c-4c3a-4d63-9434-197015fdd0ab.png" width="200" height="121">
+
 ## [SubSongFolderSetting](https://github.com/rynan4818/SubSongFolderSetting)
 BeatSaberのカスタムソングフォルダを追加する設定ツール
 

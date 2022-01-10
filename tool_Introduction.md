@@ -15,7 +15,7 @@ BeatSaberのゲームプレイ録画の編集や整理を支援するツール
 
 ## [ScoreSaberの各種ランキング](https://github.com/rynan4818/ScoreSaberRanking/blob/master/README.md#scoresaber%E3%81%AE%E5%90%84%E7%A8%AE%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0)
 ScoreSaberのプレイカウントなどによるランキング(自動更新)
-![image](https://user-images.githubusercontent.com/14249877/148824145-4a1fedbc-051a-47d9-a9b5-1f97c7ac4a75.png)
+<img src="https://user-images.githubusercontent.com/14249877/148824145-4a1fedbc-051a-47d9-a9b5-1f97c7ac4a75.png" width="550" height="214">
 
 ## [CutSpeedCounter](https://github.com/rynan4818/CutSpeedCounter)
 ノーツカットのスピードを表示するCounters+用カスタムカウンター

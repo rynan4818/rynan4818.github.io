@@ -88,8 +88,11 @@ OBS StudioでBeatSaberの録画開始せずプレイするとプレイ終了毎�
 ## [bsr,beatsaver検索ブックマークレット](https://docs.google.com/document/d/1iqraopptZzW_y9I3TJo076GYlQ6PLYbzqduI66vhS74/edit?usp=sharing)
 選択もしくは入力されたbsrのbeatsaverの譜面ページに飛ぶブックマークレット
 
-## [PlayListTOOL](https://drive.google.com/drive/folders/11mAGloDwHjuYXPua-h1YwafnYN5JbXlD?usp=sharing)
-GoogleスプレッドシートやEXCELを使用してBeatSaberのプレイリストの編集を支援するツール
+## [PlayListTOOL](https://github.com/rynan4818/PlayListTool)
+ScoreSaberの指定ユーザのTopやRecentのスコア一覧をプレイリスト化します。
+また、GoogleスプレッドシートやEXCELを使用してBeatSaberのプレイリストの編集を支援する機能もあります。
+
+<img src="https://user-images.githubusercontent.com/14249877/149654844-5f67b7f3-71cc-4a93-9619-4cba55582361.png" width="589" height="529">
 
 ## [SongData2CSV](https://drive.google.com/drive/folders/1e2ccPTAIbXYL9KE6paUGcvSud_t35WGU?usp=sharing)
 SongDataCoreのデータベースをCSV化するツール

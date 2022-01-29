@@ -18,6 +18,11 @@ ScoreSaberのプレイカウントなどによるランキング(自動更新)
 
 <img src="https://user-images.githubusercontent.com/14249877/148824145-4a1fedbc-051a-47d9-a9b5-1f97c7ac4a75.png" width="550" height="214">
 
+## [MediocreMapAssistant2日本語版](https://github.com/rynan4818/MediocreMapAssistant2/releases)
+作譜ツールのMMA2の主要部分を日本語化したものです。
+
+<img src="https://user-images.githubusercontent.com/14249877/151654488-ede844d5-2d05-4b24-9bb8-3ebbbdcf1d65.gif" width="640" height="376">
+
 ## [CutSpeedCounter](https://github.com/rynan4818/CutSpeedCounter)
 ノーツカットのスピードを表示するCounters+用カスタムカウンター
 

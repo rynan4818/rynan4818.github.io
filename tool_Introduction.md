@@ -26,7 +26,7 @@ ScoreSaberのプレイカウントなどによるランキング(自動更新)
 ## [ChroMapper-CameraMovement](https://github.com/rynan4818/ChroMapper-CameraMovement)
 CameraPlus用のMovementScriptを読み込んで、作譜ツールのChroMapperでカメラワークの再現をするChroMapper用プラグインです
 
-<img src="https://user-images.githubusercontent.com/14249877/154273423-3d6bdcfe-a859-472b-9381-a7bf6e9a300b.png" width="727" hight="467">
+<img src="https://user-images.githubusercontent.com/14249877/158151048-4d7dbe2e-0df6-4a9d-812a-b977847721b7.png" width="696" hight="443">
 
 ## [CutSpeedCounter](https://github.com/rynan4818/CutSpeedCounter)
 ノーツカットのスピードを表示するCounters+用カスタムカウンター

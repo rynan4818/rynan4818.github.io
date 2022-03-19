@@ -24,7 +24,7 @@ ScoreSaberのプレイカウントなどによるランキング(自動更新)
 <img src="https://user-images.githubusercontent.com/14249877/151654488-ede844d5-2d05-4b24-9bb8-3ebbbdcf1d65.gif" width="640" height="376">
 
 ## [ChroMapper-CameraMovement](https://github.com/rynan4818/ChroMapper-CameraMovement)
-CameraPlus用のMovementScriptを読み込んで、作譜ツールのChroMapperでカメラワークの再現をするChroMapper用プラグインです
+CameraPlus用のMovementScriptを読み込んで、作譜ツールのChroMapperでカメラワークの再現をするChroMapper用プラグインです。Script Mapperを使ったカメラスクリプトの作成が便利になるように作ってあります。
 
 <img src="https://user-images.githubusercontent.com/14249877/158151048-4d7dbe2e-0df6-4a9d-812a-b977847721b7.png" width="696" hight="443">
 

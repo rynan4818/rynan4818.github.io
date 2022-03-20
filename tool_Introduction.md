@@ -87,6 +87,9 @@ BeatSaberの譜面をOneSaber化するツール
 ## [Beat Saber HTTP Status Checker](https://rynan4818.github.io/http_status_check.html)
 HTTPStatsuから飛んでくるJSONを確認するツール(HTTPStatusを使ったオーバーレイなどの開発者向け)
 
+## [Beat Saber HTTP Status Checker2](https://rynan4818.github.io/http_status_check2.html)
+選択したアイテムを１イベント１行で表示するバージョン
+
 ## [Counters+の剣速km/h化](https://drive.google.com/drive/folders/1GLDgl4RS8n7GbK77lzrgExc_V-Ee2A30?usp=sharing)
 Counters+のSpeed表示をm/secからkm/hに変更したバージョン
 

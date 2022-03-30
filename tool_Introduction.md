@@ -13,6 +13,26 @@ BeatSaberのゲームプレイ録画の編集や整理を支援するツール
 ## [DataRecorder](https://github.com/rynan4818/DataRecorder)
 上記のプレイ動画カットツール（[BS Movie Cut](https://github.com/rynan4818/bs-movie-cut)）用のプレイ情報記録用mod
 
+## [ScoreSaberの各種ランキング](https://github.com/rynan4818/ScoreSaberRanking/blob/master/README.md#scoresaber%E3%81%AE%E5%90%84%E7%A8%AE%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0)
+ScoreSaberのプレイカウントなどによるランキング(自動更新)
+
+<img src="https://user-images.githubusercontent.com/14249877/148824145-4a1fedbc-051a-47d9-a9b5-1f97c7ac4a75.png" width="550" height="214">
+
+## [MediocreMapAssistant2日本語版](https://github.com/rynan4818/MediocreMapAssistant2/releases)
+作譜ツールのMMA2の主要部分を日本語化したものです。
+
+<img src="https://user-images.githubusercontent.com/14249877/151654488-ede844d5-2d05-4b24-9bb8-3ebbbdcf1d65.gif" width="640" height="376">
+
+## [ChroMapper-CameraMovement](https://github.com/rynan4818/ChroMapper-CameraMovement)
+CameraPlus用のMovementScriptを読み込んで、作譜ツールのChroMapperでカメラワークの再現をするChroMapper用プラグインです。Script Mapperを使ったカメラスクリプトの作成が便利になるように作ってあります。
+
+<img src="https://user-images.githubusercontent.com/14249877/158151048-4d7dbe2e-0df6-4a9d-812a-b977847721b7.png" width="696" hight="443">
+
+## [CutSpeedCounter](https://github.com/rynan4818/CutSpeedCounter)
+ノーツカットのスピードを表示するCounters+用カスタムカウンター
+
+<img src="https://user-images.githubusercontent.com/14249877/138584495-2aabd12c-4c3a-4d63-9434-197015fdd0ab.png" width="200" height="121">
+
 ## [SubSongFolderSetting](https://github.com/rynan4818/SubSongFolderSetting)
 BeatSaberのカスタムソングフォルダを追加する設定ツール
 
@@ -67,6 +87,9 @@ BeatSaberの譜面をOneSaber化するツール
 ## [Beat Saber HTTP Status Checker](https://rynan4818.github.io/http_status_check.html)
 HTTPStatsuから飛んでくるJSONを確認するツール(HTTPStatusを使ったオーバーレイなどの開発者向け)
 
+## [Beat Saber HTTP Status Checker2](https://rynan4818.github.io/http_status_check2.html)
+選択したアイテムを１イベント１行で表示するバージョン
+
 ## [Counters+の剣速km/h化](https://drive.google.com/drive/folders/1GLDgl4RS8n7GbK77lzrgExc_V-Ee2A30?usp=sharing)
 Counters+のSpeed表示をm/secからkm/hに変更したバージョン
 
@@ -78,8 +101,11 @@ OBS StudioでBeatSaberの録画開始せずプレイするとプレイ終了毎�
 ## [bsr,beatsaver検索ブックマークレット](https://docs.google.com/document/d/1iqraopptZzW_y9I3TJo076GYlQ6PLYbzqduI66vhS74/edit?usp=sharing)
 選択もしくは入力されたbsrのbeatsaverの譜面ページに飛ぶブックマークレット
 
-## [PlayListTOOL](https://drive.google.com/drive/folders/11mAGloDwHjuYXPua-h1YwafnYN5JbXlD?usp=sharing)
-GoogleスプレッドシートやEXCELを使用してBeatSaberのプレイリストの編集を支援するツール
+## [PlayListTOOL](https://github.com/rynan4818/PlayListTool)
+ScoreSaberの指定ユーザのTopやRecentのスコア一覧をプレイリスト化します。
+また、GoogleスプレッドシートやEXCELを使用してBeatSaberのプレイリストの編集を支援する機能もあります。
+
+<img src="https://user-images.githubusercontent.com/14249877/149654844-5f67b7f3-71cc-4a93-9619-4cba55582361.png" width="589" height="529">
 
 ## [SongData2CSV](https://drive.google.com/drive/folders/1e2ccPTAIbXYL9KE6paUGcvSud_t35WGU?usp=sharing)
 SongDataCoreのデータベースをCSV化するツール

@@ -29,8 +29,13 @@ $(function(){
     if (filter[1].indexOf(';') != -1) {
       filter2 = filter[1].split(';');
       data = data[filter[0]]
-      if (typeof data[filter2[0]][filter2[1]] === "undefined") return "";
-      return data[filter2[0]][filter2[1]];
+      if (filter2.length == 2) {
+        if (typeof data[filter2[0]][filter2[1]] === "undefined") return "";
+        return data[filter2[0]][filter2[1]];
+      } else if(filter2.length == 3) {
+        if (typeof data[filter2[0]][filter2[1]][filter2[2]] === "undefined") return "";
+        return data[filter2[0]][filter2[1]][filter2[2]];
+      }
     } else {
       if (typeof data[filter[0]][filter[1]] === "undefined") return "";
       return data[filter[0]][filter[1]];
@@ -247,6 +252,16 @@ const httpstatus_json = {
   "beatmapEvent": {
     "type": 1,
     "value": 1
+  },
+  "other": {
+    "srm_queue_status": false,
+    "HeadDistanceTravelled;Posoition;x": 0,
+    "HeadDistanceTravelled;Posoition;y": 0,
+    "HeadDistanceTravelled;Posoition;z": 0,
+    "HeadDistanceTravelled;Rotation;x": 0,
+    "HeadDistanceTravelled;Rotation;y": 0,
+    "HeadDistanceTravelled;Rotation;z": 0,
+    "HeadDistanceTravelled;Distance": 0
   }
 }
 

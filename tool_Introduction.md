@@ -28,6 +28,11 @@ CameraPlus用のMovementScriptを読み込んで、作譜ツールのChroMapper�
 
 <img src="https://user-images.githubusercontent.com/14249877/158151048-4d7dbe2e-0df6-4a9d-812a-b977847721b7.png" width="696" hight="443">
 
+## [ChroMapper-MultiDisplayWindow](https://github.com/rynan4818/ChroMapper-MultiDisplayWindow)
+ChroMapperで、マルチディスプレイ環境の時にマルチウィンドウで複数カメラで表示するプラグインです。
+
+<img src="https://user-images.githubusercontent.com/14249877/171408555-26aa9a59-d6be-4c33-91fb-fcdeea42f00d.png" width="696" hight="594">
+
 ## [CutSpeedCounter](https://github.com/rynan4818/CutSpeedCounter)
 ノーツカットのスピードを表示するCounters+用カスタムカウンター
 

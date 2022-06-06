@@ -38,6 +38,11 @@ ChroMapperで、マルチディスプレイ環境の時にマルチウィンド�
 
 <img src="https://user-images.githubusercontent.com/14249877/138584495-2aabd12c-4c3a-4d63-9434-197015fdd0ab.png" width="200" height="121">
 
+## [HDTCounter](https://github.com/rynan4818/HDTCounter)
+HeadDistanceTravelledのHMD移動距離を表示するCounters+用カスタムカウンター
+
+![image](https://user-images.githubusercontent.com/14249877/172158178-c825414b-6bc0-41b4-8ea5-7851f0afc8dd.png)
+
 ## [SubSongFolderSetting](https://github.com/rynan4818/SubSongFolderSetting)
 BeatSaberのカスタムソングフォルダを追加する設定ツール
 

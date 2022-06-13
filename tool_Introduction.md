@@ -33,6 +33,9 @@ ChroMapperで、マルチディスプレイ環境の時にマルチウィンド�
 
 <img src="https://user-images.githubusercontent.com/14249877/171408555-26aa9a59-d6be-4c33-91fb-fcdeea42f00d.png" width="696" hight="594">
 
+## [AutoItControl](https://github.com/rynan4818/AutoItControl)
+BeatSaberでAutoItを使って外部ソフトをコントロールするmod
+
 ## [CutSpeedCounter](https://github.com/rynan4818/CutSpeedCounter)
 ノーツカットのスピードを表示するCounters+用カスタムカウンター
 

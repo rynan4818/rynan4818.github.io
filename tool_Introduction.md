@@ -24,14 +24,28 @@ ScoreSaberのプレイカウントなどによるランキング(自動更新)
 <img src="https://user-images.githubusercontent.com/14249877/151654488-ede844d5-2d05-4b24-9bb8-3ebbbdcf1d65.gif" width="640" height="376">
 
 ## [ChroMapper-CameraMovement](https://github.com/rynan4818/ChroMapper-CameraMovement)
-CameraPlus用のMovementScriptを読み込んで、作譜ツールのChroMapperでカメラワークの再現をするChroMapper用プラグインです。Script Mapperを使ったカメラスクリプトの作成が便利になるように作ってあります。
+BeatSaberでカメラワークを作成するための、ChroMapper用のプラグインです。
+CameraPlus用のカメラスクリプトのプレビューや、Script Mapperを使ったスクリプトの作成を支援する機能があります。
 
 <img src="https://user-images.githubusercontent.com/14249877/158151048-4d7dbe2e-0df6-4a9d-812a-b977847721b7.png" width="696" hight="443">
+
+## [ChroMapper-MultiDisplayWindow](https://github.com/rynan4818/ChroMapper-MultiDisplayWindow)
+ChroMapperで、マルチディスプレイ環境の時にマルチウィンドウで複数カメラで表示するプラグインです。
+
+<img src="https://user-images.githubusercontent.com/14249877/171408555-26aa9a59-d6be-4c33-91fb-fcdeea42f00d.png" width="696" hight="594">
+
+## [AutoItControl](https://github.com/rynan4818/AutoItControl)
+BeatSaberでAutoItを使って外部ソフトをコントロールするmod
 
 ## [CutSpeedCounter](https://github.com/rynan4818/CutSpeedCounter)
 ノーツカットのスピードを表示するCounters+用カスタムカウンター
 
 <img src="https://user-images.githubusercontent.com/14249877/138584495-2aabd12c-4c3a-4d63-9434-197015fdd0ab.png" width="200" height="121">
+
+## [HDTCounter](https://github.com/rynan4818/HDTCounter)
+HeadDistanceTravelledのHMD移動距離を表示するCounters+用カスタムカウンター
+
+![image](https://user-images.githubusercontent.com/14249877/172158178-c825414b-6bc0-41b4-8ea5-7851f0afc8dd.png)
 
 ## [SubSongFolderSetting](https://github.com/rynan4818/SubSongFolderSetting)
 BeatSaberのカスタムソングフォルダを追加する設定ツール

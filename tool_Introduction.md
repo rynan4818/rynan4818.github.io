@@ -34,6 +34,11 @@ ChroMapperで、マルチディスプレイ環境の時にマルチウィンド�
 
 <img src="https://user-images.githubusercontent.com/14249877/171408555-26aa9a59-d6be-4c33-91fb-fcdeea42f00d.png" width="696" hight="594">
 
+## [ChroMapper-HalfJumpDurationMark](https://github.com/rynan4818/ChroMapper-HalfJumpDurationMark)
+ChroMapperで、Half Jump Durationの位置(ノーツがスポーンする位置)に薄い壁を表示するプラグインです。
+
+<img src="https://user-images.githubusercontent.com/14249877/184469197-987ee5d7-e05b-4b99-89da-89eb6a30157c.png" width="581" hight="389">
+
 ## [AutoItControl](https://github.com/rynan4818/AutoItControl)
 BeatSaberでAutoItを使って外部ソフトをコントロールするmod
 

@@ -18,6 +18,11 @@ ScoreSaberのプレイカウントなどによるランキング(自動更新)
 
 <img src="https://user-images.githubusercontent.com/14249877/148824145-4a1fedbc-051a-47d9-a9b5-1f97c7ac4a75.png" width="550" height="214">
 
+## [PlayerInfoViewer](https://github.com/rynan4818/PlayerInfoViewer)
+ScoreSaberのプレイヤー情報のうちScoreSaber modで表示されない項目を追加表示するBeatSaber mod
+
+<img src="https://user-images.githubusercontent.com/14249877/193413697-f5aadd39-aef8-40b5-a3af-59a03a7f320c.png" width="640" height="270">
+
 ## [MediocreMapAssistant2 修正版・日本語版](https://github.com/rynan4818/MediocreMapAssistant2/releases)
 作譜ツールのMMA2の英語版の機能修正および主要部分の日本語化したものです。
 

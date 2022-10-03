@@ -39,6 +39,11 @@ ChroMapperで、マルチディスプレイ環境の時にマルチウィンド�
 
 <img src="https://user-images.githubusercontent.com/14249877/171408555-26aa9a59-d6be-4c33-91fb-fcdeea42f00d.png" width="696" hight="594">
 
+## [ChroMapper-RhythmMarker](https://github.com/rynan4818/ChroMapper-RhythmMarker)
+ChroMapperで、グリッド上に拍子毎など一定間隔で色付きのラインマークを作成します。
+
+<img src="https://user-images.githubusercontent.com/14249877/193462676-37273fc4-e85d-4b76-b74d-76fea864661f.png" width="696" hight="430">
+
 ## [ChroMapper-HalfJumpDurationMark](https://github.com/rynan4818/ChroMapper-HalfJumpDurationMark)
 ChroMapperで、Half Jump Durationの位置(ノーツがスポーンする位置)に薄い壁を表示するプラグインです。
 

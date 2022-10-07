@@ -118,9 +118,6 @@ HTTPStatsuから飛んでくるJSONを確認するツール(HTTPStatusを使っ�
 ## [Beat Saber HTTP Status Checker2](https://rynan4818.github.io/http_status_check2.html)
 選択したアイテムを１イベント１行で表示するバージョン
 
-## [Counters+の剣速km/h化](https://drive.google.com/drive/folders/1GLDgl4RS8n7GbK77lzrgExc_V-Ee2A30?usp=sharing)
-Counters+のSpeed表示をm/secからkm/hに変更したバージョン
-
 ## [obs_rec_check](https://drive.google.com/drive/folders/1k5ktlbStV2Bq-gHQbHzDFTGlh1MIM4mw?usp=sharing)
 OBS StudioでBeatSaberの録画開始せずプレイするとプレイ終了毎に警告音が鳴るOBSのLuaスクリプト
 

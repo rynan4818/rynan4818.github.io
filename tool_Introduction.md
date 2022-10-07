@@ -92,11 +92,6 @@ XSplit Broadcasterのシーン自動切り替えをする拡張プラグイン
 
 [サンプル動画](https://twitter.com/rynan4818/status/1384522716795994131)
 
-## [SongOfPiInformation](https://github.com/rynan4818/BeatmapInformation/tree/SongOfPiInformation)
-["Song of Pi (10238 Digits Ver.)"](https://beatsaver.com/beatmap/60a)の現在と残り桁数と数字を表示するMOD
-
-<img src="https://rynan4818.github.io/song-of-pi-information1.png" width="243" height="177">
-
 ## ["Song of Pi (10238 Digits Ver.)" Overlay](https://github.com/rynan4818/song-of-pi-overlay)
 ["Song of Pi (10238 Digits Ver.)"](https://beatsaver.com/beatmap/60a)の現在と残り桁数と数字を表示するオーバーレイ
 

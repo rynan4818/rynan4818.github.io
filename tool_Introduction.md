@@ -87,6 +87,10 @@ BeatSaberの大会開催時に便利なスコア表示用オーバーレイ
 
 [サンプル動画](https://twitter.com/rynan4818/status/1384822435434831874)
 
+## [HttpPlayButtonStatus](https://github.com/rynan4818/HttpPlayButtonStatus)
+obs-controlやStreamlabs-obs-controlのゲームスタートシーンに切り替わるタイミングを、PLAYボタンを押した瞬間に早められるmod。
+自動シーン切り替えのON/OFFやオプション用シーン1~3にBeatSaber内から手動切替もできます。
+
 ## [BS-AutoSceneChanger](https://github.com/rynan4818/BS-AutoSceneChanger)
 XSplit Broadcasterのシーン自動切り替えをする拡張プラグイン
 

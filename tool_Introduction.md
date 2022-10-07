@@ -118,11 +118,6 @@ HTTPStatsuから飛んでくるJSONを確認するツール(HTTPStatusを使っ�
 ## [Beat Saber HTTP Status Checker2](https://rynan4818.github.io/http_status_check2.html)
 選択したアイテムを１イベント１行で表示するバージョン
 
-## [obs_rec_check](https://drive.google.com/drive/folders/1k5ktlbStV2Bq-gHQbHzDFTGlh1MIM4mw?usp=sharing)
-OBS StudioでBeatSaberの録画開始せずプレイするとプレイ終了毎に警告音が鳴るOBSのLuaスクリプト
-
-[obs-control](https://github.com/rynan4818/obs-control)に同じ機能を搭載したので、そちらがオススメ
-
 ## [bsr,beatsaver検索ブックマークレット](https://docs.google.com/document/d/1iqraopptZzW_y9I3TJo076GYlQ6PLYbzqduI66vhS74/edit?usp=sharing)
 選択もしくは入力されたbsrのbeatsaverの譜面ページに飛ぶブックマークレット
 

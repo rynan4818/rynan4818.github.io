@@ -23,6 +23,11 @@ ScoreSaberのプレイヤー情報のうちScoreSaber modで表示されない�
 
 <img src="https://user-images.githubusercontent.com/14249877/193413697-f5aadd39-aef8-40b5-a3af-59a03a7f320c.png" width="640" height="270">
 
+## [StagePositionViewer](https://github.com/rynan4818/StagePositionViewer)
+ステージ上のプレイヤー(HMD)の位置をグラフィカルに表示するBeatSaber mod
+
+![image](https://user-images.githubusercontent.com/14249877/210227621-3b5585ab-e77a-4067-850e-004ba6ac95be.png)
+
 ## [MediocreMapAssistant2 修正版・日本語版](https://github.com/rynan4818/MediocreMapAssistant2/releases)
 作譜ツールのMMA2の英語版の機能修正および主要部分の日本語化したものです。
 

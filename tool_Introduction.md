@@ -70,6 +70,11 @@ HeadDistanceTravelledのHMD移動距離を表示するCounters+用カスタム�
 
 ![image](https://user-images.githubusercontent.com/14249877/172158178-c825414b-6bc0-41b4-8ea5-7851f0afc8dd.png)
 
+## [CO2CounterStatus](https://github.com/rynan4818/CO2CounterStatus)
+I/O DATA製のUD-CO2Sを使って、二酸化炭素濃度と温度と湿度を表示するCounters+用のカスタムカウンターと、HttpSiraStatusを使用したオーバーレイ表示、PlayerInfoViewer表示
+
+![image](https://user-images.githubusercontent.com/14249877/219855750-6605731c-b134-46a0-9594-ea347817b993.png)
+
 ## [SubSongFolderSetting](https://github.com/rynan4818/SubSongFolderSetting)
 BeatSaberのカスタムソングフォルダを追加する設定ツール
 

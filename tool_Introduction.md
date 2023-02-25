@@ -54,6 +54,9 @@ ChroMapperで、Half Jump Durationの位置(ノーツがスポーンする位置
 
 <img src="https://user-images.githubusercontent.com/14249877/184469197-987ee5d7-e05b-4b99-89da-89eb6a30157c.png" width="581" hight="389">
 
+## [ChroMapper-SettingTweaks](https://github.com/rynan4818/ChroMapper-SettingTweaks)
+ChroMapperの変更できない設定を変更する、ちょっとしたプラグインです。
+
 ## [CustomSongTimeEvents](https://github.com/rynan4818/CustomSongTimeEvents)
 BeatSaberのCustom Sabers(Saber Factory), Custom Avatars, Custom Platformsの3Dモデルデータに、譜面の曲時間に合わせたイベントを追加するUnityコンポーネント、BeatSaber mod、プレビュー用のChroMapperプラグインです。
 

@@ -60,6 +60,9 @@ ChroMapperの変更できない設定を変更する、ちょっとしたプラ�
 ## [ChroMapperPluginTemplates](https://github.com/rynan4818/ChroMapperPluginTemplates)
 ChroMapperのプラグインを作る時のVisualStudio用テンプレートです。
 
+## [BSIPA-PluginTemplates](https://github.com/rynan4818/BSIPA-PluginTemplates)
+BeatSaberのMod作成用のVisualStudio用テンプレートです。
+
 ## [CustomSongTimeEvents](https://github.com/rynan4818/CustomSongTimeEvents)
 BeatSaberのCustom Sabers(Saber Factory), Custom Avatars, Custom Platformsの3Dモデルデータに、譜面の曲時間に合わせたイベントを追加するUnityコンポーネント、BeatSaber mod、プレビュー用のChroMapperプラグインです。
 

@@ -155,10 +155,10 @@ SongDataCoreのデータベースをCSV化するツール
 id, key, downloadCount, upVotes, downVotes, heat, rating, automapper, uploaddate, pp, star,	diff, type, len, njs, bmb, nts, obs
 の全難易度毎のリストが取得できます
 
-## ScoreSaberのランキングとpp推移のグラフ表示
-グローバル20000位以内の2019/11/10以降のpp値とランキングの推移を、指定ユーザ個人や前後の順位のユーザと共にグラフ表示するサイト
+## [ScoreSaberのランキングとpp推移のグラフ表示](https://beatsaber.rynan.com/scoresaber/)
+ScoreSaberグローバル20000位以内の2019/11/10以降の指定ユーザ個人のpp値とランキングの推移をグラフ表示するサイト
 
-<img src="https://rynan4818.github.io/pp_rank_graf1.png" width="295" height="274"><img src="https://rynan4818.github.io/pp_rank_graf2.png" width="301" height="262">
+<img src="https://rynan4818.github.io/pp_rank_graf1.png" width="295" height="274">
 
 ※サーバの負荷対策のため、一般公開はしていません。日本のビーセイ鯖のユーザはmod置き場の2020/2/2の私の書き込みを参照下さい。
 

@@ -18,6 +18,12 @@ ScoreSaberのプレイカウントなどによるランキング(自動更新)
 
 <img src="https://user-images.githubusercontent.com/14249877/148824145-4a1fedbc-051a-47d9-a9b5-1f97c7ac4a75.png" width="550" height="214">
 
+## [ScoreSaberの各種データのグラフ・テーブル表示](https://beatsaber.rynan.com/scoresaber/)
+ScoreSaberグローバル20000位以内の2019/11/10以降の各種データをグラフ表示・テーブル表示するサイト
+
+<img src="https://github.com/rynan4818/rynan4818.github.io/assets/14249877/7f5961ab-733f-4924-b6ed-642c70ac09a6" width="444" height="276">
+<img src="https://github.com/rynan4818/rynan4818.github.io/assets/14249877/7daac0cc-82e1-4891-bb10-ab05d7d31b79" width="444" height="276">
+
 ## [PlayerInfoViewer](https://github.com/rynan4818/PlayerInfoViewer)
 ScoreSaberのプレイヤー情報のうちScoreSaber modで表示されない項目を追加表示するBeatSaber mod
 
@@ -154,11 +160,6 @@ SongDataCoreのデータベースをCSV化するツール
 
 id, key, downloadCount, upVotes, downVotes, heat, rating, automapper, uploaddate, pp, star,	diff, type, len, njs, bmb, nts, obs
 の全難易度毎のリストが取得できます
-
-## [ScoreSaberのランキングとpp推移のグラフ表示](https://beatsaber.rynan.com/scoresaber/)
-ScoreSaberグローバル20000位以内の2019/11/10以降の指定ユーザ個人のpp値とランキングの推移をグラフ表示するサイト
-
-<img src="https://rynan4818.github.io/pp_rank_graf1.png" width="295" height="274">
 
 ## [BeatSaberの譜面作成方法](https://note.com/rynan/n/nc899b58987c9)
 ツールではありませんが、作譜をやってみて調べた内容でnoteの記事を書きました。

@@ -63,6 +63,10 @@ ChroMapperで、Half Jump Durationの位置(ノーツがスポーンする位置
 ## [ChroMapper-SettingTweaks](https://github.com/rynan4818/ChroMapper-SettingTweaks)
 ChroMapperの変更できない設定を変更する、ちょっとしたプラグインです。
 
+## [Demucs v4の簡単インストーラ](https://drive.google.com/drive/u/1/folders/1bm_OMCmlPIrX1vOgWgVwGNfBB4HrXUnA)
+音楽データをAI学習データを使って、ドラム・ベース・ボーカル・その他に高精度に分離することができるDemucs v4の簡単インストーラです。
+BeatSaberの作譜用にoggへの変換も自動で行います。作譜の音取りがしやすくなるかもしれません。
+
 ## [ChroMapperPluginTemplates](https://github.com/rynan4818/ChroMapperPluginTemplates)
 ChroMapperのプラグインを作る時のVisualStudio用テンプレートです。
 

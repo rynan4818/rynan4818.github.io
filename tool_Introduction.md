@@ -48,6 +48,9 @@ CameraPlus用のカメラスクリプトのプレビューや、Script Mapperを
 ## [blender2ScriptMapper](https://github.com/rynan4818/blender2ScriptMapper)
 別のカメラスクリプトのカメラパスを読み込めるscriptコマンドを追加した[改造版Script Mapper用](https://github.com/rynan4818/Scriptmapper)に、Blenderで作ったカメラパスをCameraPlus用のカメラスクリプトとして出力するBlender用のスクリプトです。
 
+## [MovementScriptChange](https://github.com/rynan4818/MovementScriptChange)
+CameraPlusのMovementScript(カメラスクリプト)の指定した時間のJSONを書き換えるツールです。
+
 ## [ChroMapper-MultiDisplayWindow](https://github.com/rynan4818/ChroMapper-MultiDisplayWindow)
 ChroMapperで、マルチディスプレイ環境の時にマルチウィンドウで複数カメラで表示するプラグインです。
 

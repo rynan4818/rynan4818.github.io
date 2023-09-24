@@ -29,6 +29,11 @@ ScoreSaberのプレイヤー情報のうちScoreSaber modで表示されない�
 
 <img src="https://user-images.githubusercontent.com/14249877/193413697-f5aadd39-aef8-40b5-a3af-59a03a7f320c.png" width="640" height="270">
 
+## [KosorenTool](https://github.com/rynan4818/KosorenTool)
+ScoreSaberなどのオンラインリーダーボードにスコアを送信せずにプレイをするためのBeatSaber mod
+
+<img src="https://github.com/rynan4818/KosorenTool/assets/14249877/16c6f34c-4203-4c49-82bb-70e5131395da" width="656" height="400">
+
 ## [StagePositionViewer](https://github.com/rynan4818/StagePositionViewer)
 ステージ上のプレイヤー(HMD)の位置をグラフィカルに表示するBeatSaber mod
 

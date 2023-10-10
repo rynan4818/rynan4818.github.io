@@ -34,6 +34,11 @@ ScoreSaberなどのオンラインリーダーボードにスコアを送信せ�
 
 <img src="https://github.com/rynan4818/KosorenTool/assets/14249877/16c6f34c-4203-4c49-82bb-70e5131395da" width="656" height="400">
 
+## [BSAlarmClock](https://github.com/rynan4818/BSAlarmClock)
+自由に移動可能なタイマー・アラーム付き時計です。メニューとプレイ画面で別々に位置・表示・アラーム音有無が設定可能です。
+
+![image](https://github.com/rynan4818/rynan4818.github.io/assets/14249877/a55e074c-46d3-4445-9269-8b88c0ccda48)
+
 ## [StagePositionViewer](https://github.com/rynan4818/StagePositionViewer)
 ステージ上のプレイヤー(HMD)の位置をグラフィカルに表示するBeatSaber mod
 

@@ -59,7 +59,8 @@ CameraPlus用のカメラスクリプトのプレビューや、Script Mapperを
 BeatSaberでアバターやセイバー等のオブジェクトの動きを曲の時間に合わせて記録するツールです。ChroMapper-CameraMovementで再生することができます。
 
 ## [blender2ScriptMapper](https://github.com/rynan4818/blender2ScriptMapper)
-別のカメラスクリプトのカメラパスを読み込めるscriptコマンドを追加した[改造版Script Mapper用](https://github.com/rynan4818/Scriptmapper)に、Blenderで作ったカメラパスをCameraPlus用のカメラスクリプトとして出力するBlender用のスクリプトです。
+Blenderで作ったカメラパスをCameraPlus用のカメラスクリプトとして出力するBlender用のスクリプトです。
+Script MapperのscriptコマンドでBlenderで作ったカメラパスを読み込めます。
 
 ## [MovementScriptChange](https://github.com/rynan4818/MovementScriptChange)
 CameraPlusのMovementScript(カメラスクリプト)の指定した時間のJSONを書き換えるツールです。

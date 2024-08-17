@@ -1,7 +1,5 @@
 # BeatSaber自作ツールの紹介
-### 目次
-{:toc}
-
+----
 # オーバーレイ関係
 ## [Beat Saber Overlay 改良版](https://github.com/rynan4818/beat-saber-overlay)
 [Beat Saber Overlay](https://github.com/Reselim/beat-saber-overlay)に各種表示オプションを追加し、機能改善したオーバーレイ

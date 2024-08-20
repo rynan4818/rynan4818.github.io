@@ -1,5 +1,7 @@
 # BeatSaber自作ツールの紹介
 ![image](https://github.com/user-attachments/assets/bf449827-596d-45c1-91f3-a94cf0a816ce)
+* [BeatSaber-mod対応状況](https://github.com/rynan4818/rynan4818.github.io/wiki/BeatSaber-mod%E5%AF%BE%E5%BF%9C%E7%8A%B6%E6%B3%81)
+* [ChroMapper-Plugin対応状況](https://github.com/rynan4818/rynan4818.github.io/wiki/ChroMapper-Plugin%E5%AF%BE%E5%BF%9C%E7%8A%B6%E6%B3%81)
 ----
 # オーバーレイ関係
 ## [Beat Saber Overlay 改良版](https://github.com/rynan4818/beat-saber-overlay)

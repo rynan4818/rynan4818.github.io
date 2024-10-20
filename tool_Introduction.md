@@ -217,3 +217,6 @@ ChroMapperのプラグインを作る時のVisualStudio用テンプレートで�
 
 ## [BSIPA-PluginTemplates](https://github.com/rynan4818/BSIPA-PluginTemplates)
 BeatSaberのMod作成用のVisualStudio用テンプレートです。
+
+## [BeatSaber mod製作参考](https://github.com/rynan4818/rynan4818.github.io/wiki/BeatSaber-mod%E8%A3%BD%E4%BD%9C%E5%8F%82%E8%80%83)
+私のBeatSaberのmod製作経験上の得た知識のリンクメモです。

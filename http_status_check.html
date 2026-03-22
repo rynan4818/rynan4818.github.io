@@ -31,8 +31,19 @@ $(function(){
 		};
 
 		ws.onmessage = function(event){
-			var json = event.data.replace(/([,{}])/g, "$1\n");
-			var json_data = JSON.parse(json);
+			var json_data;
+			try {
+				json_data = JSON.parse(event.data);
+			} catch (error) {
+				$("#msg-area").text(
+					"JSON parse error: " + error.message + "\n\n" +
+					"Raw payload:\n" + event.data
+				);
+				$("#time").text("");
+				$("#index").text("");
+				console.error("WebSocket JSON parse error", error, event.data);
+				return;
+			}
 			last_json = json_data;
 			last_event_json[json_data.event] = json_data;
 			if (typeof json_data_buffer[json_data.event] === "undefined") json_data_buffer[json_data.event] = [];

@@ -1,5 +1,6 @@
 {
 	"LatestVersion": {
-		"bs_movie_cut": "2024/10/07"
+		"bs_movie_cut": "2024/10/07",
+		"CameraScriptManager": "0.1.0"
 	}
 }

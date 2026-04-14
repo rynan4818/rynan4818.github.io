@@ -90,6 +90,10 @@
         <div id="chart5" class="chart"></div>
     </div>
 
+    <div class="chart-container">
+        <div id="chart6" class="chart"></div>
+    </div>
+
     <script>
         const DATA_URL = 'https://raw.githubusercontent.com/rakkyo150/player_count_by_bs_version/refs/heads/master/data/history.json';
         const TARGET_VERSION = "1.29.1";
@@ -157,6 +161,12 @@
                 quest: []
             };
 
+            // グラフ6用 (更新状況)
+            const updatedAggregated = {
+                updated: [],
+                unupdated: []
+            };
+
             data.forEach(entry => {
                 const date = parseTimestamp(entry.timestamp);
                 const dateStr = date.toLocaleString('ja-JP'); // X軸表示用
@@ -214,6 +224,9 @@
 
                 totalAggregated.pc.push(pcTotalCount);
                 totalAggregated.quest.push(questTotalCount);
+                
+                updatedAggregated.updated.push(entry.updated_players || 0);
+                updatedAggregated.unupdated.push(entry.unupdated_players || 0);
             });
 
             // 詳細データの配列整形
@@ -326,12 +339,29 @@
                 ]
             });
 
+            // -------------------------------------------------
+            // グラフ6: 更新／未更新プレイヤー状況推移
+            // -------------------------------------------------
+            const chart6 = echarts.init(document.getElementById('chart6'));
+            chart6.setOption({
+                title: { text: '更新／未更新プレイヤー状況推移 (updated vs unupdated)', left: 'center' },
+                tooltip: { trigger: 'axis' },
+                legend: { data: ['updated_players', 'unupdated_players'], bottom: 0 },
+                xAxis: { type: 'category', data: timeSeries },
+                yAxis: { type: 'value', name: '人数' },
+                series: [
+                    { name: 'updated_players', type: 'line', data: updatedAggregated.updated, smooth: true },
+                    { name: 'unupdated_players', type: 'line', data: updatedAggregated.unupdated, smooth: true }
+                ]
+            });
+
             window.addEventListener('resize', () => {
                 chart1.resize();
                 chart2.resize();
                 chart3.resize();
                 chart4.resize();
                 chart5.resize();
+                chart6.resize();
             });
         }
 

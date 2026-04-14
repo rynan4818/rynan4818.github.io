@@ -86,6 +86,10 @@
         <div id="chart4" class="chart"></div>
     </div>
 
+    <div class="chart-container">
+        <div id="chart5" class="chart"></div>
+    </div>
+
     <script>
         const DATA_URL = 'https://raw.githubusercontent.com/rakkyo150/player_count_by_bs_version/refs/heads/master/data/history.json';
         const TARGET_VERSION = "1.29.1";
@@ -146,6 +150,12 @@
             const pcVersionsMap = {}; 
             // グラフ4用 (Quest詳細)
             const questVersionsMap = {};
+            
+            // グラフ5用 (合計推移)
+            const totalAggregated = {
+                pc: [],
+                quest: []
+            };
 
             data.forEach(entry => {
                 const date = parseTimestamp(entry.timestamp);
@@ -183,6 +193,8 @@
                 // 詳細データの記録（後処理用に一時保存）
                 entry._pcDetails = {};
                 entry._questDetails = {};
+                let pcTotalCount = 0;
+                let questTotalCount = 0;
                 
                 for (const [key, count] of Object.entries(entry.platform_game_version)) {
                     const parts = key.split(',');
@@ -193,10 +205,15 @@
                     if (platform === 'steam' || platform === 'oculuspc') {
                         if (!entry._pcDetails[version]) entry._pcDetails[version] = 0;
                         entry._pcDetails[version] += count;
+                        pcTotalCount += count;
                     } else if (platform === 'oculus') {
                         entry._questDetails[version] = count;
+                        questTotalCount += count;
                     }
                 }
+
+                totalAggregated.pc.push(pcTotalCount);
+                totalAggregated.quest.push(questTotalCount);
             });
 
             // 詳細データの配列整形
@@ -293,11 +310,28 @@
                 series: questSeries
             });
 
+            // -------------------------------------------------
+            // グラフ5: PC版とQuest版の合計推移
+            // -------------------------------------------------
+            const chart5 = echarts.init(document.getElementById('chart5'));
+            chart5.setOption({
+                title: { text: 'PC版 / Quest版 合計プレイヤー数推移', left: 'center' },
+                tooltip: { trigger: 'axis' },
+                legend: { data: ['PC版合計', 'Quest版合計'], bottom: 0 },
+                xAxis: { type: 'category', data: timeSeries },
+                yAxis: { type: 'value', name: '人数' },
+                series: [
+                    { name: 'PC版合計', type: 'line', data: totalAggregated.pc, smooth: true },
+                    { name: 'Quest版合計', type: 'line', data: totalAggregated.quest, smooth: true }
+                ]
+            });
+
             window.addEventListener('resize', () => {
                 chart1.resize();
                 chart2.resize();
                 chart3.resize();
                 chart4.resize();
+                chart5.resize();
             });
         }
 
